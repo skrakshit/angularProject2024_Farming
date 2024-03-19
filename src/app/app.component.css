@@ -1,0 +1,323 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+.hamburger {
+  position: absolute;
+  right: 40px;
+  top: 40px;
+  width: 60px;
+  height: 60px;
+  background: url(https://i.ibb.co/HrfVRcx/menu.png) no-repeat center;
+  background-size: 30px;
+  cursor: pointer;
+}
+
+.hamburger.active {
+  background: url(https://i.ibb.co/rt3HybH/close.png) no-repeat center;
+  background-size: 25px;
+  background-color: #1d5838;
+  position: absolute;
+  right: -260px;
+  -webkit-transition: 1s;
+  transition: 1s;
+  -webkit-animation: rotate 1s ease-in-out;
+          animation: rotate 1s ease-in-out;
+}
+
+@-webkit-keyframes rotate {
+  0% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+  }
+}
+
+@keyframes rotate {
+  0% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+  }
+}
+
+
+
+section.hero {
+  right: 0;
+  width: 100%;
+  min-height: 100vh;
+  padding: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: #000000;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  z-index: 2;
+}
+
+section.hero.active {
+  right: 300px;
+}
+
+section.hero img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  opacity: 0.7;
+}
+
+.text {
+  position: relative;
+  z-index: 10;
+}
+
+.text h2 {
+  font-size: 72px;
+  font-weight: 800;
+  color: #FFFFFF;
+  line-height: 1em;
+  text-transform: uppercase;
+}
+
+.text h3 {
+  font-size: 40px;
+  font-weight: 700;
+  color: #FFFFFF;
+  line-height: 1em;
+  text-transform: uppercase;
+}
+
+.text p {
+  font-size: 18px;
+  color: #FFFFFF;
+  margin: 20px 0;
+  font-weight: 400;
+  max-width: 700px;
+}
+
+.text a {
+  display: inline-block;
+  font-size: 18px;
+  background: #FFFFFF;
+  padding: 8px 24px;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-weight: 500;
+  margin-top: 10px;
+  color: #000000;
+  letter-spacing: 2px;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+.text a:hover {
+  letter-spacing: 8px;
+  color: #0c7039;
+}
+
+.social {
+  position: absolute;
+  z-index: 10;
+  bottom: 24px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.social li {
+  list-style: none;
+}
+
+.social li a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-transition: 0.8s;
+  transition: 0.8s;
+  margin-right: 24px;
+}
+
+.social li a:hover {
+  margin-bottom: 16px;
+}
+
+@media (max-width: 1000px) {
+  section.hero,
+  section.hero header {
+    padding: 40px;
+  }
+  .text h2 {
+    font-size: 40px;
+  }
+  .text h3 {
+    font-size: 28px;
+  }
+  .text p {
+    font-size: 16px;
+  }
+}
+
+/* Image text section */
+.image_text_section-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  margin: 0 auto;
+  width: 1280px;
+}
+
+.image_text_section-container .image_text_section-image .image_container {
+  width: 640px;
+  height: auto;
+  margin-left: 32px;
+}
+
+.image_text_section-container .image_text_section-image .image_container img {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 99%;
+  max-width: 640px;
+  height: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -webkit-box-shadow: 0 0 16px 0 #000000;
+          box-shadow: 0 0 16px 0 #000000;
+  margin: 0 auto;
+}
+
+.image_text_section-container .image_text_section-text {
+  width: 640px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-left: 40px;
+}
+
+.image_text_section-container .image_text_section-text p {
+  text-align: justify;
+}
+
+@media (max-width: 1000px) {
+  .image_text_section-container,
+  .image_text_section-container .image_text_section-image .image_container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 80vw;
+    margin: 0 auto;
+  }
+  .image_text_section-container .image_text_section-text {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 80vw;
+    margin: 16px auto 0;
+  }
+  .image_text_section-container .image_text_section-text p,
+  .image_text_section-container .image_text_section-text h1 {
+    margin: 0;
+    width: 100%;
+  }
+}
+
+.footer_container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 40px;
+  color: #FFFFFF;
+  background-color: #1d5838;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+section {
+  position: relative;
+  padding: 64px 0;
+  width: 85vw;
+  margin: 0 auto;
+}
+
+.nav {
+display: flex;
+justify-content: right;
+background-color: #1d5838;
+padding: 10px 20px;
+
+}
+
+.container-fluid {
+  background-color: #1d5838;
+  color: #ffffff;
+}
+
+/* Add this CSS to make navbar text color white */
+.navbar-nav .nav-link {
+  color: #ffffff; /* Set the text color to white */
+}
+
+/* Add this CSS to make active navbar link text color white */
+.navbar-nav .nav-link.active {
+  color: #ffffff; /* Set the active link text color to white */
+}
+
+/* Add this CSS to make navbar brand text color white */
+.navbar-brand {
+  color: #ffffff; /* Set the navbar brand text color to white */
+}
+
+/* Add this CSS to make navbar toggle icon color white */
+.navbar-toggler-icon {
+  color: #ffffff; /* Set the navbar toggle icon color to white */
+}
